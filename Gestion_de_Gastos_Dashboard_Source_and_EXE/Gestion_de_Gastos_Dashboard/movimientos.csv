@@ -1,0 +1,21 @@
+﻿fecha,tipo,categoria,descripcion,valor_COP
+2026-11-01,Ingreso,Salario,Pago mensual,1500000
+2026-11-02,Gasto,Alimentación,Mercado,180000
+2026-11-03,Gasto,Transporte,Pasajes,50000
+2026-11-05,Gasto,Servicios,Internet,80000
+2026-11-07,Gasto,Educación,Materiales,45000
+2026-11-10,Ingreso,Ingreso extra,Trabajo adicional,200000
+2026-11-11,Gasto,Alimentación,Almuerzo,25000
+2026-11-12,Gasto,Entretenimiento,Cine,40000
+2026-11-14,Gasto,Transporte,Recarga transporte,30000
+2026-11-15,Gasto,Salud,Medicamentos,35000
+2026-11-16,Gasto,Alimentación,Mercado,95000
+2026-11-18,Gasto,Servicios,Electricidad,70000
+2026-11-20,Gasto,Entretenimiento,Salida,55000
+2026-11-21,Gasto,Educación,Impresiones,20000
+2026-11-23,Gasto,Transporte,Pasajes,45000
+2026-11-24,Gasto,Alimentación,Cena,30000
+2026-11-25,Gasto,Salud,Consulta,60000
+2026-11-27,Gasto,Servicios,Agua,40000
+2026-11-28,Gasto,Entretenimiento,Plataforma,25000
+2026-11-30,Gasto,Alimentación,Mercado,85000

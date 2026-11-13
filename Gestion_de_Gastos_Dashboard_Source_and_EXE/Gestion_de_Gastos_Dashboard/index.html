@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Dashboard personal para registrar y analizar ingresos y gastos."
+    />
+    <title>Gestión de gastos | Samuel Nieto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">$</div>
+        <div class="brand-copy">
+          <div class="eyebrow">MICROTALLER 7 · CONTROL PERSONAL</div>
+          <h1>Gestión de gastos</h1>
+          <p>Ingresos, egresos y hábitos de consumo · Samuel Nieto Pardo</p>
+        </div>
+        <div class="period-chip"><span class="dot"></span> NOVIEMBRE 2026</div>
+      </header>
+      <section class="welcome">
+        <div>
+          <span class="overline">RESUMEN FINANCIERO</span>
+          <h2>Tu dinero, más fácil de entender.</h2>
+          <p>
+            Consulta los datos del periodo, revisa las categorías y explora cada
+            movimiento desde un solo lugar.
+          </p>
+        </div>
+        <div class="welcome-symbol" aria-hidden="true">↗</div>
+      </section>
+      <section class="section-heading">
+        <div>
+          <h2>Indicadores principales</h2>
+          <p>Totales calculados a partir de los movimientos registrados</p>
+        </div>
+        <span class="sample-badge">Datos ficticios de demostración</span>
+      </section>
+      <section class="kpi-grid" aria-label="Indicadores principales">
+        <article class="kpi kpi-income">
+          <div class="kpi-head">
+            <span>INGRESOS</span><span class="kpi-icon">＋</span>
+          </div>
+          <strong id="kpi-income">—</strong><small>Dinero recibido</small>
+        </article>
+        <article class="kpi kpi-expense">
+          <div class="kpi-head">
+            <span>GASTOS</span><span class="kpi-icon">−</span>
+          </div>
+          <strong id="kpi-expense">—</strong><small>Dinero gastado</small>
+        </article>
+        <article class="kpi kpi-balance">
+          <div class="kpi-head">
+            <span>SALDO</span><span class="kpi-icon">＝</span>
+          </div>
+          <strong id="kpi-balance">—</strong
+          ><small>Ingresos menos gastos</small>
+        </article>
+        <article class="kpi kpi-category">
+          <div class="kpi-head">
+            <span>MAYOR CONSUMO</span><span class="kpi-icon">✦</span>
+          </div>
+          <strong id="kpi-category">—</strong
+          ><small id="kpi-category-value">—</small>
+        </article>
+      </section>
+      <section class="section-heading filter-heading">
+        <div>
+          <h2>Explora tus gastos</h2>
+          <p>
+            El filtro modifica los gráficos y la tabla; los KPI representan
+            siempre el total del periodo.
+          </p>
+        </div>
+        <label class="filter-control"
+          >Categoría<select id="category-filter">
+            <option value="Todas">Todas las categorías</option>
+          </select></label
+        >
+      </section>
+      <section class="chart-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Gastos por categoría</h3>
+              <p>Comparación de montos</p>
+            </div>
+            <span class="chart-label">BARRAS</span>
+          </div>
+          <svg
+            id="bar-chart"
+            viewBox="0 0 650 300"
+            role="img"
+            aria-label="Gráfico de barras de gastos por categoría"
+          ></svg>
+        </article>
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <h3>Distribución del gasto</h3>
+              <p>Participación por categoría</p>
+            </div>
+            <span class="chart-label">DISTRIBUCIÓN</span>
+          </div>
+          <svg
+            id="donut-chart"
+            viewBox="0 0 500 300"
+            role="img"
+            aria-label="Gráfico de dona de gastos por categoría"
+          ></svg>
+          <div id="donut-legend" class="legend"></div>
+        </article>
+        <article class="panel panel-wide">
+          <div class="panel-heading">
+            <div>
+              <h3>Gastos registrados en el tiempo</h3>
+              <p>Valor de cada egreso según su fecha</p>
+            </div>
+            <span class="chart-label">TENDENCIA DIARIA</span>
+          </div>
+          <svg
+            id="line-chart"
+            viewBox="0 0 1000 300"
+            role="img"
+            aria-label="Gráfico de línea de gastos por fecha"
+          ></svg>
+        </article>
+      </section>
+      <section class="panel records-panel">
+        <div class="records-heading">
+          <div>
+            <h2>Movimientos de la base de datos</h2>
+            <p id="record-count">—</p>
+          </div>
+          <button id="toggle-records" class="secondary-button" type="button">
+            Mostrar registros <span>↓</span>
+          </button>
+        </div>
+        <div id="record-area" class="record-area is-hidden">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Tipo</th>
+                  <th>Categoría</th>
+                  <th>Descripción</th>
+                  <th class="numeric">Valor (COP)</th>
+                </tr>
+              </thead>
+              <tbody id="records-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <footer>
+        Proyecto académico · Valores en pesos colombianos (COP) · Registros
+        simulados para demostración
+      </footer>
+    </main>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
